@@ -12,6 +12,6 @@ end
 get '/api/hello' do
   content_type :json
   {
-    data: 'world'
+    data: 'fff'
   }.to_json
 end

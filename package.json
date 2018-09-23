@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.prod.config.js",
     "lint": "eslint src/**",
     "lint:watch": "esw -w src/**",
-    "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js --require ignore-styles"
+    "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js --require ignore-styles",
+    "heroku-postbuild": "yarn && yarn run build"
   },
   "author": "",
   "license": "MIT",

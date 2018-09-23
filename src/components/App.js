@@ -4,14 +4,25 @@ import PropTypes from 'prop-types';
 import '../assets/styles/App.scss';
 
 
-const App = ({ name }) => {
-  return (
-    <h1>Hello, {name}!</h1>
-  );
-};
+class App extends React.Component{
+    constructor() {
+      super();
+      this.state = { data: { data: 'norge' } };
+    }
+    componentDidMount() {
+      fetch('/api/hello')
+        .then(res => res.json())
+        .then(json => this.setState({ data: json }));
+    }
+    
+    render(){
+        return(
+            <div>
+                  <h1>Hello, {this.state.data.data}!</h1>
+            </div>
+        );
+    }
+}
 
-App.propTypes = {
-  name: PropTypes.string,
-};
 
 export default App;

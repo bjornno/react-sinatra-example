@@ -2,6 +2,8 @@
 _for [Heroku](https://www.heroku.com/) deployment_
 
 ## OVERVIEW
+This repository is a fork of https://github.com/alanbsmith/react-sinatra-example.git and modified a bit.
+
 This is a simple starter to get you up and running with React & Sinatra. This is intended to provide:
 
 * a lightweight Webpack config (for development and production)
@@ -67,29 +69,3 @@ $ heroku create -a name-of-your-app
 $ git push heroku master
 $ heroku open
 ```
-
-If you're unfamiliar with Heroku deployment (or just need a refresher), they have a really great walkthrough [here](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction).
-
-
-## CHANGELOG
-
-### v1.0.0
-This app has been updated to use React v15.5 and Webpack 2.3! 🎉
-
-**Major Changes:**
-
-* Updates React and ReactDOM to v15.5
-* Updates Webpack to v2.3
-* Enables hot-reloading for local development
-* Adds initial test suite with Enzyme, Expect, and Mocha
-
-**Minor Changes:**
-
-* Updates all other dependencies to latest
-* Updates eslint rules
-* Updates npm scripts
-* Adds yarn.lock
-* Updates README
-
-### v0.1.0
-Initial release. Basic setup for a React + Sinatra integration

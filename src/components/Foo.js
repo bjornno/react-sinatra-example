@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import '../assets/styles/App.scss';
 
 
-class App extends React.Component{
+class Foo extends React.Component{
     constructor() {
       super();
       this.state = { data: { data: 'norge' } };
@@ -16,13 +16,16 @@ class App extends React.Component{
     }
     
     render(){
-        return(
-            <div>
-                  <h1>Hello, {this.state.data.data}!</h1>
-            </div>
-        );
+      const { value, onIncreaseClick } = this.props
+      return(
+          <div>
+                <h1>Hello, {this.state.data.data}!</h1>
+                <span>{value}</span>
+                <button onClick={onIncreaseClick}>Increase</button>
+          </div>
+      );
     }
 }
 
 
-export default App;
+export default Foo;

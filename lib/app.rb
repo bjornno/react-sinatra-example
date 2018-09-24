@@ -15,3 +15,4 @@ get '/api/hello' do
     data: 'fff'
   }.to_json
 end
+
